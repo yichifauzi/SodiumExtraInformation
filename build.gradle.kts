@@ -67,9 +67,10 @@ subprojects {
 
     tasks.register("printEnv") {
         doLast {
-            println("::set-env name=MOD_VERSION::$MOD_VERSION")
-            println("::set-env name=RELEASE_NAME::$ARCHIVE_NAME-$MOD_VERSION")
-            println("::set-env name=MINECRAFT_VERSION::$COMPATIBLE_VERSIONS")
+            val envFile = File(System.getenv("GITHUB_ENV"))
+            envFile.appendText("MOD_VERSION=$MOD_VERSION\n")
+            envFile.appendText("RELEASE_NAME=$ARCHIVE_NAME-$MOD_VERSION\n")
+            envFile.appendText("MINECRAFT_VERSION=$COMPATIBLE_VERSIONS\n")
         }
     }
 }
