@@ -19,6 +19,8 @@ val SODIUM_VERSION by extra { "mc1.21.2-0.6.0-beta.3" }
 val SODIUM_EXTRA_VERSION by extra { "mc1.21.3-0.6.0-beta.4" }
 val MODMENU_VERSION by extra { "12.0.0-beta.1" }
 
+val COMPATIBLE_VERSIONS by extra { "[1.21.2, 1.22)" }
+
 allprojects {
     apply(plugin = "java")
     apply(plugin = "maven-publish")
@@ -61,5 +63,13 @@ subprojects {
 
     tasks.withType<GenerateModuleMetadata>().configureEach {
         enabled = false
+    }
+
+    tasks.register("printEnv") {
+        doLast {
+            println("::set-env name=MOD_VERSION::$MOD_VERSION")
+            println("::set-env name=RELEASE_NAME::$ARCHIVE_NAME-$MOD_VERSION")
+            println("::set-env name=MINECRAFT_VERSION::$COMPATIBLE_VERSIONS")
+        }
     }
 }
