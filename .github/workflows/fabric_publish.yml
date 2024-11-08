@@ -1,9 +1,6 @@
 name: FabricPublish
 
-on:
-  push:
-    branches:
-      - 'Multiloader-*'
+on: [ workflow_dispatch ]
 
 env:
   JAVA_VERSION: 21
