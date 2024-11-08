@@ -52,6 +52,8 @@ jobs:
           version-type: 'beta'
           changelog-file: CHANGELOG.md
 
+          game-versions: ${{ env.GAME_VERSIONS }}
+
           loaders: |
             neoforge
 

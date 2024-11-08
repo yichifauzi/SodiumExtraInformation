@@ -50,6 +50,8 @@ jobs:
           version-type: 'beta'
           changelog-file: CHANGELOG.md
 
+          game-versions: ${{ env.GAME_VERSIONS }}
+
           loaders: |
             fabric
             quilt
@@ -77,6 +79,8 @@ jobs:
           version: ${{ env.MOD_VERSION }}
           version-type: 'beta'
           changelog-file: CHANGELOG.md
+
+          game-versions: ${{ env.GAME_VERSIONS }}
 
           loaders: |
             neoforge
