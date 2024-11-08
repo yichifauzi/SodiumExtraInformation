@@ -6,7 +6,7 @@ issueTrackerURL="https://github.com/anviaan/SodiumExtraInformation/issues"
 [[mods]]
 modId = "sodiumextrainformation"
 
-version = "2.2-beta.1"
+version = "2.2-beta.4"
 displayName = "Sodium Extra Information"
 
 logoFile = "sodiumextrainformation.png"
@@ -20,14 +20,14 @@ A Sodium Extra addon that adds more in-game information.
 [[dependencies.sodiumextrainformation]]
 modId = "minecraft"
 type = "required"
-versionRange = "[1.20.4,1.21.1)"
+versionRange = "[1.21.1,1.22)"
 ordering = "NONE"
 side = "CLIENT"
 
 [[dependencies.sodiumextrainformation]]
 modId = "sodium"
 type = "required"
-versionRange = "[0.6.0-beta.2,0.6.0)"
+versionRange = "[0.6.0-beta.3,0.6.0)"
 ordering = "NONE"
 side = "CLIENT"
 

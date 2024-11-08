@@ -78,7 +78,7 @@ public class SodiumExtraHudMixin {
 
         if (SodiumExtraInformationClientMod.options().extraInformationSettings.showsRenderedEntities) {
             if (client.level != null) {
-                textList.add(Component.translatable("sodium-extra-information.hud.shows_rendered_entities").append(": ").append(String.valueOf(client.levelRenderer.renderedEntities)));
+                textList.add(Component.translatable("sodium-extra-information.hud.shows_rendered_entities").append(": ").append(String.valueOf(client.levelRenderer.visibleEntityCount)));
             }
         }
 
@@ -87,7 +87,7 @@ public class SodiumExtraHudMixin {
                 ClientLevel level = client.level;
                 BlockPos playerPos = client.player.blockPosition();
                 Biome biome = level.getBiome(playerPos).value();
-                String biomeName = level.registryAccess().registryOrThrow(Registries.BIOME).getKey(biome).toString();
+                String biomeName = level.registryAccess().lookupOrThrow(Registries.BIOME).getKey(biome).toString();
                 MutableComponent txt = biomeName.startsWith("minecraft:")
                         ? Component.translatable("biome.minecraft." + biomeName.substring("minecraft:".length()))
                         : Component.literal(biomeName);

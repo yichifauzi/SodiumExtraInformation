@@ -37,9 +37,9 @@
   ],
   "depends": {
     "fabricloader": ">=0.15",
-    "sodium": ">=0.6.0-beta.2",
-    "sodium-extra": ">=0.6.0-beta.3",
-    "minecraft": ">=1.21"
+    "sodium": ">=0.6.0-beta.3",
+    "sodium-extra": ">=0.6.0-beta.4",
+    "minecraft": ">=1.21.2"
   },
   "breaks": {
     "iris": "<1.7.0",

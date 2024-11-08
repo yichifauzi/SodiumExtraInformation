@@ -1,2 +1,2 @@
 accessWidener   v2  named
-accessible field net/minecraft/client/renderer/LevelRenderer renderedEntities I
+accessible field net/minecraft/client/renderer/LevelRenderer visibleEntityCount I
