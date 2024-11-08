@@ -49,7 +49,7 @@ jobs:
 
           name: ${{ env.RELEASE_NAME }}
           version: ${{ env.MOD_VERSION }}
-          version-type: 'release'
+          version-type: 'beta'
           changelog-file: CHANGELOG.md
 
           loaders: |
